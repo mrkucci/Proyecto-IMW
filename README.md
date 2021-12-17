@@ -1,4 +1,6 @@
-**Este es mi Proyecto de Laravel para el curso de 2ºASIR de Implantación de Aplicaciones Web**
+
+
+#Proyecto de Laravel para IMW - Gamenow
 
 La aplicación tratá de un gestor para una página web de Videojuegos, con carrito de compra, caratulas y títulos, secciones de productos y demás.
 
