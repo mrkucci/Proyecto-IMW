@@ -91,7 +91,7 @@
                     </ul>
                 </div>
             @endif
-            
+
             @yield('content')
         </main>
     </div>

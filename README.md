@@ -11,7 +11,7 @@ _**Comandos Útiles**_
 ```console
 callmeaday@heaven:~$ php -S 0.0.0.0:8000 -t public
 ```
-
+<br>
 
 >Borrar la base de datos y volver a crearla:
 ```console
@@ -52,5 +52,21 @@ callmeaday@heaven:~$ composer laravel/ui
 2. Seguidamente ejecutamos este comando:
 ```console
 callmeaday@heaven:~$ php artisan ui bootstrap --auth
+```
+
+<br>
+
+>Instalar en Frontend en nuestro proyecto Laravel con npm:
+1. Si queremos ver la versión de npm que tenemos ejecutamos:
+```console
+callmeaday@heaven:~$ npm --version
+```
+2. Si queremos instalar las dependencias de npm ejecutamos:
+```console
+callmeaday@heaven:~$ npm install
+```
+3. Para realizar la compilación ejecutamos:
+```console
+callmeaday@heaven:~$ npm run dev
 ```
 
