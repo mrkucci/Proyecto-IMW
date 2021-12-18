@@ -1,7 +1,10 @@
+@extends('layouts.app')
 
+@section('content')
+<h1>{{ $product->titulo }}</h1>
+<p>{{ $product->descripcion}}</p>
+<p>{{ $product->precio}}</p>
+<p>{{ $product->stock}}</p>
+<p>{{ $product->status}}</p>
 
-
-<h1>Mostrando el producto con el id 1</h1>
-
-
-<p>Best game ever</p>
+@endsection
