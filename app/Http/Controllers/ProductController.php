@@ -37,20 +37,19 @@ class ProductController extends Controller
 
 
 
-        if (request()->status == 'disponible' && request()->stock == 0){
-            session()->flash('error', 'Si el producto está disponible no puede tener un Stock de 0 items.');
-
+        if (request()->status == 'disponible' && request()->stock == 0) {
             return redirect()
                 ->back()
-                ->withInput(request()->all());
+                ->withInput(request()->all())
+                ->withErrors('Si el producto está disponible no puede tener un Stock de 0 items.');
         }
 
 
         $product = Product::create(request()->all());
 
-        session()->flash('success', "El producto con el id {$product->id} ha sido creado con éxito.");
-
-        return redirect()->route('products.index');
+        return redirect()
+            ->route('products.index')
+            ->withSuccess("El producto con el id {$product->id} ha sido creado con éxito.");
     }
 
     //Mostrar un producto
@@ -74,7 +73,7 @@ class ProductController extends Controller
     //Actualizando un producto
     public function update($product)
     {
-        $rules = [
+        $rules = [ 
             'titulo' => ['required', 'max:50'],
             'descripcion' => ['required', 'max:1000'],
             'precio' => ['required', 'min:1'],
@@ -88,7 +87,9 @@ class ProductController extends Controller
 
         $product->update(request()->all());
 
-        return redirect()->route('products.index');
+        return redirect()
+            ->route('products.index')
+            ->withSuccess("El producto con el id {$product->id} ha sido editado con éxito.");
     }
 
     //Eliminar un producto
@@ -98,6 +99,8 @@ class ProductController extends Controller
 
         $product->delete();
 
-        return redirect()->route('products.index');
+        return redirect()
+            ->route('products.index')
+            ->withSuccess("El producto con el id {$product->id} ha sido borrado con éxito.");;
     } 
 }
