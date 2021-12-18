@@ -5,7 +5,7 @@
 La aplicación tratá de un gestor para una página web de Videojuegos, con carrito de compra, caratulas y títulos, secciones de productos y demás.
 
 
-**Comandos Útiles**
+_**Comandos Útiles**_
 
 Borrar la base de datos y volver a crearla:
 
