@@ -7,6 +7,12 @@ El proyecto ha sido programado en un entorno de Gitpod, si lo desean pueden abri
 
 _**Comandos Útiles**_
 
+>Poner la aplicación en funcionamiento en local:
+```console
+callmeaday@heaven:~$ php -S 0.0.0.0:8000 -t public
+```
+
+
 >Borrar la base de datos y volver a crearla:
 ```console
 callmeaday@heaven:~$ php artisan migrate:fresh
