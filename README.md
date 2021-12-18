@@ -9,12 +9,12 @@ _**Comandos Útiles**_
 
 >Borrar la base de datos y volver a crearla:
 ```console
-foo@bar:~$ php artisan migrate:fresh
+callmeaday@heaven:~$ php artisan migrate:fresh
 ```
 
 >Generar datos de prueba con Tinker:
 ```console
-foo@bar:~$ php artisan tinker
+callmeaday@heaven:~$ php artisan tinker
 ```
 ```console
 >>> App\Models\Product::factory()->make();
@@ -22,7 +22,7 @@ foo@bar:~$ php artisan tinker
 
 >Insertar datos en la base de datos con Tinker:
 ```console
-foo@bar:~$ php artisan tinker
+callmeaday@heaven:~$ php artisan tinker
 ```
 ```console
 >>> App\Models\Product::factory()->create();
@@ -30,6 +30,16 @@ foo@bar:~$ php artisan tinker
 
 >El seeder también se puede ejecutar usando en la terminal el siguiente comando:
 ```console
-foo@bar:~$ php artisan db:seed
+callmeaday@heaven:~$ php artisan db:seed
+```
+
+>Instalación de Autentificación en Laravel
+1. Primero ejecutamos el siguiente comando en la terminal:
+```console
+callmeaday@heaven:~$ composer laravel/ui
+```
+2. Seguidamente ejecutamos este comando:
+```console
+callmeaday@heaven:~$ php artisan ui bootstrap --auth
 ```
 
