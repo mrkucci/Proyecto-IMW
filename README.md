@@ -1,8 +1,8 @@
 
 
-<h1>Proyecto de Laravel para IMW - Gamenow</h1>
+<h1>Proyecto de Laravel para IMW - Happy Hour Gaming</h1>
 
-La aplicación tratá de un gestor para una página web de Videojuegos, con carrito de compra, caratulas y títulos, secciones de productos y demás.
+La aplicación tratá de un gestor para una página web de Videojuegos, con carrito de compra, caratulas y títulos, secciones de productos, todo entorno a la temática de una tienda de videojuegos.
 
 
 _**Comandos Útiles**_
