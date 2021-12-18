@@ -8,25 +8,25 @@
         @method('PUT')
         <div class="form-row">
             <label>Título</label>
-            <input class="form-control" type="text" name="titulo" value="{{$product->titulo}}" required>
+            <input class="form-control" type="text" name="titulo" value="{{old('titulo') ?? $product->titulo}}" required>
         </div>
         <div class="form-row">
             <label>Descripción</label>
-            <input class="form-control" type="text" name="descripcion" value="{{$product->descripcion}}" required>
+            <input class="form-control" type="text" name="descripcion" value="{{old('descripcion') ?? $product->descripcion}}" required>
         </div>
         <div class="form-row">
             <label>Precio</label>
-            <input class="form-control" type="number" min="1.00" step="0.05" name="precio" value="{{$product->precio}}" required>
+            <input class="form-control" type="number" min="1.00" step="0.05" name="precio" value="{{old('precio') ?? $product->precio}}" required>
         </div>
         <div class="form-row">
             <label>Stock</label>
-            <input class="form-control" type="text" min="0" name="stock" value="{{$product->stock}}" required>
+            <input class="form-control" type="text" min="0" name="stock" value="{{old('stock') ?? $product->stock}}" required>
         </div>
         <div class="form-row">
             <label>Status</label>
             <select class="custom-select" name="status" required>
-                <option {{$product -> status == 'disponible' ? 'selected' : ''}} value="disponible">Disponible</option>
-                <option {{$product -> status == 'no disponible' ? 'selected' : ''}} value="no disponible">No disponible</option>
+                <option {{old('status') == 'disponible' ? 'selected' : ($product -> status == 'disponible' ? 'selected' : '')}} value="disponible">Disponible</option>
+                <option {{old('status') == 'no disponible' ? 'selected' : ($product -> status == 'no disponible' ? 'selected' : '')}} value="no disponible">No disponible</option>
             </select>
         </div>
         <div class="form-row">

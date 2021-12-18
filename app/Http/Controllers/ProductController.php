@@ -25,9 +25,32 @@ class ProductController extends Controller
     //Almacenar un producto
     public function store(Request $request)
     {
+        $rules = [
+            'titulo' => ['required', 'max:50'],
+            'descripcion' => ['required', 'max:1000'],
+            'precio' => ['required', 'min:1'],
+            'stock' => ['required', 'min:0'],
+            'status' => ['required', 'in:disponible,no disponible'],
+
+        ];
+        request()->validate($rules);
+
+
+
+        if (request()->status == 'disponible' && request()->stock == 0){
+            session()->flash('error', 'Si el producto está disponible no puede tener un Stock de 0 items.');
+
+            return redirect()
+                ->back()
+                ->withInput(request()->all());
+        }
+
+
         $product = Product::create(request()->all());
 
-        return ($product);
+        session()->flash('success', "El producto con el id {$product->id} ha sido creado con éxito.");
+
+        return redirect()->route('products.index');
     }
 
     //Mostrar un producto
@@ -51,11 +74,21 @@ class ProductController extends Controller
     //Actualizando un producto
     public function update($product)
     {
+        $rules = [
+            'titulo' => ['required', 'max:50'],
+            'descripcion' => ['required', 'max:1000'],
+            'precio' => ['required', 'min:1'],
+            'stock' => ['required', 'min:0'],
+            'status' => ['required', 'in:disponible,no disponible'],
+
+        ];
+        request()->validate($rules);
+
         $product = Product::findOrFail($product);
 
         $product->update(request()->all());
 
-        return $product;
+        return redirect()->route('products.index');
     }
 
     //Eliminar un producto
@@ -65,6 +98,6 @@ class ProductController extends Controller
 
         $product->delete();
 
-        return $product;
-    }
+        return redirect()->route('products.index');
+    } 
 }
