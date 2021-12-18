@@ -1,6 +1,6 @@
 
 
-#Proyecto de Laravel para IMW - Gamenow
+<h1>Proyecto de Laravel para IMW - Gamenow</h1>
 
 La aplicación tratá de un gestor para una página web de Videojuegos, con carrito de compra, caratulas y títulos, secciones de productos y demás.
 
