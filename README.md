@@ -5,7 +5,7 @@
 La aplicación tratá de un gestor para una página web de Videojuegos, con carrito de compra, caratulas y títulos, secciones de productos, todo entorno a la temática de una tienda de videojuegos.
 El proyecto ha sido programado en un entorno de Gitpod, si lo desean pueden abrir una máquina clonada totalmente nueva en su entorno de desarollo abriendo el siguiente Snapshot de Gitpod:
 
-[Proyecto](https://gitpod)
+[Proyecto](https://gitpod.io#snapshot/7ba1f08e-b923-4655-8343-a6b16b774e94)
 
 _**Comandos Útiles**_
 
