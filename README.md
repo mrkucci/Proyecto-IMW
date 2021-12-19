@@ -3,12 +3,9 @@
 <h1>Proyecto de Laravel para IMW - Happy Hour Gaming</h1>
 
 La aplicación tratá de un gestor para una página web de Videojuegos, con carrito de compra, caratulas y títulos, secciones de productos, todo entorno a la temática de una tienda de videojuegos.
-<<<<<<< HEAD
 El proyecto ha sido programado en un entorno de Gitpod, si lo desean pueden abrir una máquina clonada totalmente nueva en su entorno de desarollo abriendo el siguiente Snapshot de Gitpod:
-<a href="https://gitpod">
-=======
-El proyecto ha sido programado en un entorno de Gitpod, si lo desean pueden abrir una máquina clonada totalmente nueva en su entorno de desarollo abriendo el siguiente Snapshot de Gitpod:[Snapshot](https://gitpod.io#snapshot/57e7733c-66d1-4ec1-9d87-d9b16977d9c2)
->>>>>>> e40a5be9024204b85b765fd6e1f13c12f0646d5b
+
+[Proyecto](https://gitpod)
 
 _**Comandos Útiles**_
 
