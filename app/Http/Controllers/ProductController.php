@@ -3,11 +3,19 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
+use App\Http\Requests\ProductRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 class ProductController extends Controller
 {
+    //Proteger la autentificación de usuarios
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+    
     //Lista de productos
     public function index()
     {
@@ -23,29 +31,9 @@ class ProductController extends Controller
     }
 
     //Almacenar un producto
-    public function store(Request $request)
+    public function store(ProductRequest $request)
     {
-        $rules = [
-            'titulo' => ['required', 'max:50'],
-            'descripcion' => ['required', 'max:1000'],
-            'precio' => ['required', 'min:1'],
-            'stock' => ['required', 'min:0'],
-            'status' => ['required', 'in:disponible,no disponible'],
-
-        ];
-        request()->validate($rules);
-
-
-
-        if (request()->status == 'disponible' && request()->stock == 0) {
-            return redirect()
-                ->back()
-                ->withInput(request()->all())
-                ->withErrors('Si el producto está disponible no puede tener un Stock de 0 items.');
-        }
-
-
-        $product = Product::create(request()->all());
+        $product = Product::create($request()->validated());
 
         return redirect()
             ->route('products.index')
@@ -53,39 +41,25 @@ class ProductController extends Controller
     }
 
     //Mostrar un producto
-    public function show($product)
+    public function show(Product $product)
     {
-        $product = Product::findOrFail($product);
-
         return view('products.show')->with([
             'product' => $product,
         ]);
     }
 
     //Editando un producto
-    public function edit($product)
+    public function edit(Product $product)
     {
         return view('products.edit')->with([
-            'product' => Product::findOrFail($product),     //Con findOrFail si no se encuentra el producto se devuelve una vista con error 404
+            'product' => $product, 
         ]);
     }
 
     //Actualizando un producto
-    public function update($product)
+    public function update(ProductRequest $request, Product $product)
     {
-        $rules = [ 
-            'titulo' => ['required', 'max:50'],
-            'descripcion' => ['required', 'max:1000'],
-            'precio' => ['required', 'min:1'],
-            'stock' => ['required', 'min:0'],
-            'status' => ['required', 'in:disponible,no disponible'],
-
-        ];
-        request()->validate($rules);
-
-        $product = Product::findOrFail($product);
-
-        $product->update(request()->all());
+        $product->update($request()->validated());
 
         return redirect()
             ->route('products.index')
@@ -93,10 +67,8 @@ class ProductController extends Controller
     }
 
     //Eliminar un producto
-    public function destroy($product)
+    public function destroy(Product $product)
     {
-        $product = Product::findOrFail($product);
-
         $product->delete();
 
         return redirect()

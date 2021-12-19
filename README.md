@@ -77,3 +77,17 @@ callmeaday@heaven:~$ npm run dev
 >Para poder ejecutar el proyecto con normalidad es preciso que nos logueemos:
 1. Podemos acceder a la creación de un usuario.
 2. Luego podremos usar la aplicación con total normalidad sin restricciones.
+
+<br>
+
+>Creación de Requests en Laravel para los formularios:
+```console
+callmeaday@heaven:~$ php artisan make:request ProductRequest
+```
+
+<br>
+
+>Generación de multiples componentes con Artisan:
+```console
+callmeaday@heaven:~$ php artisan make:model Modelo -a
+```
