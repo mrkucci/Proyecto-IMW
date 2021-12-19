@@ -3,10 +3,20 @@
 <h1>Proyecto de Laravel para IMW - Happy Hour Gaming</h1>
 
 La aplicación tratá de un gestor para una página web de Videojuegos, con carrito de compra, caratulas y títulos, secciones de productos, todo entorno a la temática de una tienda de videojuegos.
+<<<<<<< HEAD
 El proyecto ha sido programado en un entorno de Gitpod, si lo desean pueden abrir una máquina clonada totalmente nueva en su entorno de desarollo abriendo el siguiente Snapshot de Gitpod:
 <a href="https://gitpod">
+=======
+El proyecto ha sido programado en un entorno de Gitpod, si lo desean pueden abrir una máquina clonada totalmente nueva en su entorno de desarollo abriendo el siguiente Snapshot de Gitpod:[Snapshot](https://gitpod.io#snapshot/57e7733c-66d1-4ec1-9d87-d9b16977d9c2)
+>>>>>>> e40a5be9024204b85b765fd6e1f13c12f0646d5b
 
 _**Comandos Útiles**_
+
+>Poner la aplicación en funcionamiento en local:
+```console
+callmeaday@heaven:~$ php -S 0.0.0.0:8000 -t public
+```
+<br>
 
 >Borrar la base de datos y volver a crearla:
 ```console
@@ -47,5 +57,21 @@ callmeaday@heaven:~$ composer laravel/ui
 2. Seguidamente ejecutamos este comando:
 ```console
 callmeaday@heaven:~$ php artisan ui bootstrap --auth
+```
+
+<br>
+
+>Instalar en Frontend en nuestro proyecto Laravel con npm:
+1. Si queremos ver la versión de npm que tenemos ejecutamos:
+```console
+callmeaday@heaven:~$ npm --version
+```
+2. Si queremos instalar las dependencias de npm ejecutamos:
+```console
+callmeaday@heaven:~$ npm install
+```
+3. Para realizar la compilación ejecutamos:
+```console
+callmeaday@heaven:~$ npm run dev
 ```
 

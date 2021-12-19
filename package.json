@@ -16,7 +16,11 @@
         "laravel-mix": "^6.0.39",
         "lodash": "^4.17.19",
         "postcss": "^8.1.14",
+<<<<<<< HEAD
         "resolve-url-loader": "^4.0.0",
+=======
+        "resolve-url-loader": "^3.1.4",
+>>>>>>> e40a5be9024204b85b765fd6e1f13c12f0646d5b
         "sass": "^1.32.11",
         "sass-loader": "^11.0.1"
     }
