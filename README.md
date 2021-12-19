@@ -72,3 +72,7 @@ callmeaday@heaven:~$ npm install
 callmeaday@heaven:~$ npm run dev
 ```
 
+<br>
+
+>Para poder ejecutar el proyecto con normalidad es preciso que nos logueemos:
+
