@@ -75,4 +75,5 @@ callmeaday@heaven:~$ npm run dev
 <br>
 
 >Para poder ejecutar el proyecto con normalidad es preciso que nos logueemos:
-
+1. Podemos acceder a la creación de un usuario.
+2. Luego podremos usar la aplicación con total normalidad sin restricciones.
