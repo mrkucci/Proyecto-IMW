@@ -2,19 +2,16 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
+use App\Models\Product;
 
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('welcome')->with([
+        'products' => Product::all(),
+    ]);
 });
 
 Route::resource('products', ProductController::class);
-
-
-
-
-
-
 
 
 Auth::routes();
