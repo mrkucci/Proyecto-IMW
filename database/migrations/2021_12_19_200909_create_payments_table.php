@@ -6,24 +6,18 @@ use Illuminate\Support\Facades\Schema;
 
 class CreatePaymentsTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
+
     public function up()
     {
         Schema::create('payments', function (Blueprint $table) {
             $table->id();
+            $table->float('total')->unsigned();
+            $table->timestamp('f_pago')->nullable();
+            //Número de pedido
             $table->timestamps();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
     public function down()
     {
         Schema::dropIfExists('payments');
