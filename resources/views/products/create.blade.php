@@ -21,7 +21,7 @@
             <label>Stock</label>
             <input class="form-control" type="text" min="0" name="stock" value="{{old('stock')}}" required>
         </div>
-        <div class="form-row">
+        <div class="form-row mt-3">
             <label>Status</label>
             <select class="custom-select" name="status" required>
                 <option value="" selected>Selecciona...</option>
@@ -29,7 +29,7 @@
                 <option {{old('status') == 'no disponible' ? 'selected' : ''}} value="no disponible">No disponible</option>
             </select>
         </div>
-        <div class="form-row">
+        <div class="form-row mt-3">
             <button type="submit" class="btn btn-primary btn-lg">Crear producto</button>
         </div>
         

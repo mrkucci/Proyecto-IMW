@@ -36,7 +36,7 @@
                         <td>
                             <a class="btn btn-link" href="{{route('products.show', ['product' => $product->id])}}">Mostrar</a>
                             <a class="btn btn-link" href="{{route('products.edit', ['product' => $product->id])}}">Editar</a>
-                            <form method="POST" action="{{route('products.destroy', ['product' => $product->id])}}">
+                            <form method="POST" class="d-inline" action="{{route('products.destroy', ['product' => $product->id])}}">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-link">Borrar</button>
