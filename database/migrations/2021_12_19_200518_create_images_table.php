@@ -17,6 +17,7 @@ class CreateImagesTable extends Migration
             $table->id();
             $table->string('ruta');
             $table->timestamps();
+            $table->morphs('conimagen');
         });
     }
 

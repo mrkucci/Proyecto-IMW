@@ -6,6 +6,9 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use App\Models\Payment;
+use App\Models\Order;
+use App\Models\Image;
 
 class User extends Authenticatable
 {
@@ -37,5 +40,14 @@ class User extends Authenticatable
 
     public function orders(){
         return $this->hasMany(Order::class, 'id_cliente');
+    }
+
+
+    public function payments(){
+        return $this->hasManyThrough(Payment::class, Order::class, 'id_cliente');
+    }
+
+    public function image(){
+        return $this->morphOne(Image::class, 'conimagen');
     }
 }

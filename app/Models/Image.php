@@ -12,4 +12,8 @@ class Image extends Model
     protected $fillable = [
         'ruta',
     ];
+
+    public function conimagen(){
+        return $this->morphTo();
+    }
 }
