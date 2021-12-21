@@ -23,11 +23,11 @@ class Product extends Model
 
 
     public function carts(){
-        return $this->belongsToMany(Cart::class)->withPivot('cantidad');
+        return $this->morphedByMany(Cart::class, 'productable')->withPivot('cantidad'); //Relación Polimórfica
     }
 
     public function orders(){
-        return $this->belongsToMany(Order::class)->withPivot('cantidad');
+        return $this->morphedByMany(Order::class, 'productable')->withPivot('cantidad');
     }
 
     public function images(){

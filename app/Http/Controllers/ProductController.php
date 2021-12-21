@@ -33,7 +33,7 @@ class ProductController extends Controller
     //Almacenar un producto
     public function store(ProductRequest $request)
     {
-        $product = Product::create($request()->validated());
+        $product = Product::create($request->validated());
 
         return redirect()
             ->route('products.index')
@@ -59,7 +59,7 @@ class ProductController extends Controller
     //Actualizando un producto
     public function update(ProductRequest $request, Product $product)
     {
-        $product->update($request()->validated());
+        $product->update($request->validated());
 
         return redirect()
             ->route('products.index')
@@ -75,4 +75,7 @@ class ProductController extends Controller
             ->route('products.index')
             ->withSuccess("El producto con el id {$product->id} ha sido borrado con éxito.");;
     } 
+
+
+    
 }
