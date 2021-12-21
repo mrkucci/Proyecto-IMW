@@ -33,4 +33,9 @@ class Product extends Model
     public function images(){
         return $this->morphMany(Image::class, 'conimagen');
     }
+
+    //Filtrado de productos disponibles en el inicio
+    public function scopeDisponible($query){
+        $query->where('status', 'Disponible');
+    }
 }

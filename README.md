@@ -91,3 +91,9 @@ callmeaday@heaven:~$ php artisan make:request ProductRequest
 ```console
 callmeaday@heaven:~$ php artisan make:model Modelo -a
 ```
+<br>
+
+>Generación de un controlador anidado a un modelo y a un padre:
+```console
+callmeaday@heaven:~$ php artisan make:controller Modelo -m modeloanidado -p modelopadre
+```

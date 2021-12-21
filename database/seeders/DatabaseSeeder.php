@@ -52,7 +52,7 @@ class DatabaseSeeder extends Seeder
 
                 $cart = $carts->random();
                 $cart->products()->attach([
-                    $cart->id => ['cantidad' => mt_rand(1, 3)]
+                    $product->id => ['cantidad' => mt_rand(1, 3)]
                 ]);
 
                 $images = Image::factory(mt_rand(2, 4))->make();
