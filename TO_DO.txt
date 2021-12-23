@@ -1,0 +1,2 @@
+Crear carrito de compra y añadir items.
+Buen layout principal

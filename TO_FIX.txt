@@ -1,0 +1,1 @@
+Arreglar el boton de Añadir carrito para que no me mande al error 404.

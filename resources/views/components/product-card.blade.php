@@ -6,7 +6,7 @@
         <h5 clas="card-text">{{ $product->descripcion }}</h5>
         <h5 clas="card-text"><strong>{{$product->stock}} en Stock</strong></h5>
 
-        <form action="POST" class="d-inline" action="{{ route('products.carts.store', ['product' => $product->id]) }}">
+        <form method="POST" class="d-inline" action="{{ route('products.carts.store', ['product' => $product->id]) }}">
             @csrf
             <button type="submit" class="btn btn-success">Añadir al carrito</button>
         </form>
