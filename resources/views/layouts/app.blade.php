@@ -39,6 +39,12 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('products.index') }}">Juegos</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('products.create') }}">Crear un producto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('carts.index') }}">Carrito</a>
+                        </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->

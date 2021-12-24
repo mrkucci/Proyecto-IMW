@@ -6,12 +6,19 @@ use App\Models\Cart;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cookie;
+use App\Services\CartService;
 
 class ProductCartController extends Controller
 {
+    public function __contruct(CartService $cartService)
+    {
+        $this->cartService = $cartService;
+    }
+
+
     public function store(Request $request, Product $product)
     {
-        $cart = $this->getFromCookieOrCreate();
+        $cart = $this->cartService->getFromCookieOrCreate();
         
 
         $cantidad = $cart->products()
@@ -19,7 +26,8 @@ class ProductCartController extends Controller
             ->pivot
             ->cantidad ?? 0;
 
-        $cart->products()->sync([
+        //La función de syncWithoutDetaching no nos elimina los productos iniciados en el carrito sólo aumenta su cantidad.
+        $cart->products()->syncWithoutDetaching([
             $product->id => ['cantidad' => $cantidad + 1],
         ]);
 
@@ -33,12 +41,4 @@ class ProductCartController extends Controller
         //
     }
 
-
-    public function getFromCookieOrCreate(){
-        $cartId = Cookie::get('cart');
-
-        $cart = Cart::find($cartId);
-
-        return $cart ?? Cart::create();
-    }
 }
