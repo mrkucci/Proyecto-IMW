@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Services\CartService;
+use App\Models\Cart;
 
 class CartController extends Controller
 {
@@ -15,11 +16,14 @@ class CartController extends Controller
     }
 
 
-
+    
+    //Mostrar el carrito de compra
     public function index()
     {    
+
+        $cart = $this->cartService->getFromCookieOrCreate();
         return view('carts.index')->with([
-            'cart' => $this->$cartService->getFromCookieOrCreate(),
+            'products' => $cart->products,
         ]);
     }
 }

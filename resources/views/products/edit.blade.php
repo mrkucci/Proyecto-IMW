@@ -25,8 +25,8 @@
         <div class="form-row">
             <label>Status</label>
             <select class="custom-select mt-3" name="status" required>
-                <option {{old('status') == 'disponible' ? 'selected' : ($product -> status == 'disponible' ? 'selected' : '')}} value="disponible">Disponible</option>
-                <option {{old('status') == 'no disponible' ? 'selected' : ($product -> status == 'no disponible' ? 'selected' : '')}} value="no disponible">No disponible</option>
+                <option {{old('status') == 'Disponible' ? 'selected' : ($product -> status == 'Disponible' ? 'selected' : '')}} value="Disponible">Disponible</option>
+                <option {{old('status') == 'No Disponible' ? 'selected' : ($product -> status == 'No Disponible' ? 'selected' : '')}} value="No Disponible">No disponible</option>
             </select>
         </div>
         <div class="form-row mt-3">

@@ -25,8 +25,8 @@
             <label>Status</label>
             <select class="custom-select" name="status" required>
                 <option value="" selected>Selecciona...</option>
-                <option {{old('status') == 'disponible' ? 'selected' : ''}}  value="disponible">Disponible</option>
-                <option {{old('status') == 'no disponible' ? 'selected' : ''}} value="no disponible">No disponible</option>
+                <option {{old('status') == 'Disponible' ? 'selected' : ''}}  value="Disponible">Disponible</option>
+                <option {{old('status') == 'No Disponible' ? 'selected' : ''}} value="No Disponible">No Disponible</option>
             </select>
         </div>
         <div class="form-row mt-3">
