@@ -10,7 +10,7 @@ use App\Services\CartService;
 
 class ProductCartController extends Controller
 {
-    public function __contruct(CartService $cartService)
+    public function __construct(CartService $cartService)
     {
         $this->cartService = $cartService;
     }

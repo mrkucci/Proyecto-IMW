@@ -1,6 +1,0 @@
-Primero edito las rutas en web.php
-
-Creo un controlador para productos con:
-    php artisan make:controller ProductController
-
-
